@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+/* BEGIN LOADING ANIM */
+#loading {
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background-color: #111; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.9s;
+    overflow: hidden;
+}
+#loading > div#loading_img_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loading > div#loading_img_wrapper > img {
+    color: white;
+    width: 15%;
+    height: auto;
+    margin: 0;
+}
+/* END LOADING ANIM */
+html,body { min-height:100%; min-width:100%; }
+
+div#page {
+	min-width: 100%;
+	min-height: 100%;
+	position:absolute;
+	top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#incomebutton[disabled] {
+    @apply text-gray-500;
+}
+#incomebutton {
+    transition-duration: 0.4s;
+    transition-property: color;
+}
+
+#copy[disabled] {
+    @apply bg-gray-500;
+}
+#copy {
+    transition-duration: 0.4s, 0.4s, 0.1s;
+    transition-property: background-color, box-shadow, transform;
+}
+#copy:hover:not([disabled]) {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+#copy:active:not([disabled]) {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: translateY(2px);
+}
+
+#money-warning.hidden {
+    display: none;
+}
+#money-warning:not(.hidden) {
+    display: block;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "emg_turn_generator",
+  "homepage": "https://emg.miraheze.org/",
+  "devDependencies": {
+    "copy-and-watch": "^0.1.6",
+    "tailwindcss": "^3.1.8"
+  },
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/style.css -o ./dist/style_output.css --watch & npx copy-and-watch --watch src/**/*.{html,js,json} dist/",
+    "build": "npx tailwindcss -i ./src/style.css -o ./dist/style_output.css & npx copy-and-watch src/**/**.{html,js,json} dist/",
+    "start": "npm run build"
+  }
+}

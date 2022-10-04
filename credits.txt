@@ -1,0 +1,2 @@
+Icon 'triangles' as the loading icon, from <a href="https://loading.io/icon/">loading.io</a>, and edited.
+<a href="https://commons.wikimedia.org/wiki/File:Arrow-down.svg">Downward icon</a> uploaded by techntvz to Wikimedia Commons
