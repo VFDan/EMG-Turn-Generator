@@ -6,8 +6,8 @@
     "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "watch": "npx tailwindcss -i ./src/style.css -o ./docs/style_output.css --watch & npx copy-and-watch --watch src/**/*.{html,js,json} docs/",
-    "build": "npx tailwindcss -i ./src/style.css -o ./docs/style_output.css & npx copy-and-watch src/**/**.{html,js,json} docs/",
+    "watch": "start /B npx tailwindcss -i ./src/style.css -o ./docs/style_output.css --watch && start /B npx copy-and-watch --watch src/**/*.{html,js,json} docs/",
+    "build": "start /B npx tailwindcss -i ./src/style.css -o ./docs/style_output.css && start /B npx copy-and-watch src/**/**.{html,js,json} docs/",
     "start": "npm run build"
   }
 }
